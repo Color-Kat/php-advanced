@@ -13,3 +13,5 @@ echo 'bit shift 30 << 1 = ' , 30 << 1, '<br>';
 echo 'bit shift 31 >> 1 = ' , 31 >> 1, '<br>';
 echo 'bit shift 30 >> 1 = ' , 30 >> 1, '<br>';
 echo 'bit shift 30 >> 3 = ' , 30 >> 3, '<br>';
+
+echo '<br> ==========================';

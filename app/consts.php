@@ -29,3 +29,5 @@ if (defined('ConstClass::numberConst')) {
 
 echo ConstClass::numberConst . ' - const in class <br>';
 echo (new ConstClass)::numberConst . ' - const in created class <br>';
+
+echo '<br> ==========================';
