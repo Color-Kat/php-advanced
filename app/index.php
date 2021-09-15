@@ -4,5 +4,6 @@
 // require('./bit_operations.php');
 // require('./comparison_operators.php');
 require('./goto.php');
-require('./loops.php');
+// require('./loops.php');
+require('./arrays.php');
 
