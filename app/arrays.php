@@ -62,7 +62,7 @@ echo in_array(0, $arr2, true) ? 'true' : 'false';
 echo '<br>';
 
 echo 'array_search (0, $arr2): <br>';
-echo array_search(0, $arr2);
+echo 'index = ', array_search(0, $arr2);
 echo '<br>';
 
 
