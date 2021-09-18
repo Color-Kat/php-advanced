@@ -6,5 +6,6 @@
 // require('./goto.php');
 // require('./loops.php');
 // require('./arrays.php');
-require('./functions.php');
+// require('./functions.php');
+require('./strings.php');
 

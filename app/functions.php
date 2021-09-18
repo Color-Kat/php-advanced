@@ -16,4 +16,14 @@ echo counter();
 echo counter();
 echo counter();
 
+echo '----------';
+echo '<br>Closure function:<br>';
+
+$mess = 'hi';
+// without use($mess) php doesn't see var because it is outside the function
+$func = function() use ($mess) {
+    echo $mess;
+};
+$func();
+
 echo '<br> ==========================';
