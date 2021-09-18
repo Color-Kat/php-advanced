@@ -31,7 +31,7 @@ echo '<br>';
 // short variant
 $str = str_replace(['[b]', '[i]', '[/b]', '[/i]'], ['<b>', '<i>', '</b>', '</i>'], $str);
 
-echo "str efter - '$str'";
+echo "str after - '$str'";
 echo '<br>';
 
 echo '----------<br>';

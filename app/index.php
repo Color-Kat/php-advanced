@@ -7,5 +7,6 @@
 // require('./loops.php');
 // require('./arrays.php');
 // require('./functions.php');
-require('./strings.php');
+// require('./strings.php');
+require('./form1.php');
 
