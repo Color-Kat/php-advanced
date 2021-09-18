@@ -9,4 +9,5 @@
 // require('./functions.php');
 // require('./strings.php');
 require('./form1.php');
+require('./checkbox.php');
 
