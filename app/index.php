@@ -12,5 +12,6 @@
 // select only one
 // require('./form1.php');
 // require('./checkbox.php');
-require('./select.php');
+// require('./select.php');
+require('./radio.php');
 
