@@ -8,6 +8,9 @@
 // require('./arrays.php');
 // require('./functions.php');
 // require('./strings.php');
-require('./form1.php');
-require('./checkbox.php');
+
+// select only one
+// require('./form1.php');
+// require('./checkbox.php');
+require('./select.php');
 
