@@ -6,16 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>select</title>
+    <title>uploading files</title>
 </head>
 <body>
 <?php
 
-    echo '<br><br> ========= fileUploading.php ========= <br><br>';
-    echo '------------------ select ----------------- <br>';
+    echo '<br><br> ====== fileUploading.php ====== <br><br>';
+    echo '------------- file uploading ------------ <br>';
     if (!empty($_FILES) && !empty($_FILES['file'])){
-        // print_r($_FILES);
-
         if ($_FILES['file']['size'] > 3 * 1024 * 1024) exit('file is too large (file must be no more than 3MB)');
 
         $upload_dir =  'uploaded_files/';

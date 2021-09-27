@@ -14,5 +14,6 @@
 // require('./checkbox.php');
 // require('./select.php');
 // require('./radio.php');
-require('./fileUploading.php');
+// require('./fileUploading.php');
+require('./mail.php');
 
