@@ -13,5 +13,6 @@
 // require('./form1.php');
 // require('./checkbox.php');
 // require('./select.php');
-require('./radio.php');
+// require('./radio.php');
+require('./fileUploading.php');
 
