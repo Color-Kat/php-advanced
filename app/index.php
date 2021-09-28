@@ -15,5 +15,6 @@
 // require('./select.php');
 // require('./radio.php');
 // require('./fileUploading.php');
-require('./mail.php');
+// require('./mail.php');
+require('./PointClass.php');
 
