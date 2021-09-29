@@ -17,5 +17,8 @@
 // require('./fileUploading.php');
 require('./mail.php');
 // require('./PointClass.php');
-require('./AbstractAnimalClass.php');
+// require('./AbstractAnimalClass.php');
+
+// ----- psr ----- //
+require('./psr-0/index.php');
 

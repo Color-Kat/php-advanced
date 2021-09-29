@@ -1,18 +1,18 @@
-version: '3'
+version: "3"
 
-services: 
+services:
 
   #web services (php and extentions)
-  web:  
+  web:
     # path to Dockerfile for web
     build: ./web
     # for rights in apache
-    environment: 
+    environment:
       - APACHE_RUN_USER=#1000
-    volumes: 
+    volumes:
       # path to application on local machine : path to application in container
       - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
-    ports: 
+    ports:
       - 8080:80
     # app files in container is here
     working_dir: ${APP_PATH_CONTAINER}
@@ -23,7 +23,7 @@ services:
     # restart container if an error occurs
     restart: always
     # sync db on local machine and in container
-    volumes: 
+    volumes:
       - ${DB_PATH_HOST}:/var/lib/mysql
     # mysql password for root user
     environment:
@@ -41,7 +41,7 @@ services:
   # install composer
   composer:
     image: composer:1.6
-    volumes: 
+    volumes:
       # to composer has access to the app files
       - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
     # workdir where scripts run

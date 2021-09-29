@@ -42,7 +42,7 @@ class Cat extends Animal{
     }
 }
 
-class Parrot extends Animal{
+final class Parrot extends Animal{
     protected int $paws = 2;
     public function color() : string {
         return 'red wings';
