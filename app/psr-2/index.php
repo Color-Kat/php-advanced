@@ -9,7 +9,7 @@
 // after namespace must be one blank line
 // after uses one blank line too
 
-// classes
+// classes 
 // the openning brace must be in the next line after class
 // in private and protected propeties and methods must be not underscore prefix
 // abstract private function name()
