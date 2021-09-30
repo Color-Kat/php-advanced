@@ -8,7 +8,7 @@ echo '----------------- mail ------------------ <br>';
 // if(empty($_POST)) exit('Request is not valid');
 // echo strcasecmp($_POST['captcha'],'w68hp');
 
-if (isset($_POST['captcha']) && strcasecmp($_POST['captcha'], 'w68hp') != 0) {
+if ( isset($_POST['captcha']) && strcasecmp($_POST['captcha'], 'w68hp') != 0) {
     header('Location: index.php2?captcha=false');
     exit();
 }
@@ -34,9 +34,9 @@ $message = urldecode($message);
 $message = trim($message);
 
 $headers = "From: " . $from . "\r\n" .
-    "Reply-To: " . $from . "\r\n" .
-    "X-Mailer: PHP/" . phpversion();
-echo $from;
+            "Reply-To: ". $from . "\r\n" .
+            "X-Mailer: PHP/".phpversion();
+            echo $from;
 
 if (mail($to, $subject, $message, $headers)) {
     echo 'Mail is sended!';
@@ -121,7 +121,7 @@ ob_end_flush();
 
         <input type="submit" value="Send mail to Gustov!">
     </form>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum sunt, molestiae nobis quae hic enim? Voluptates numquam consequatur facilis commodi deleniti eos omnis perferendis incidunt mollitia modi officiis iure, quas quae asperiores possimus! Praesentium iusto doloribus quibusdam quam. Officiis voluptatibus adipisci dolor porro hic fugit, perspiciatis incidunt iusto harum a rerum, quas blanditiis minima ipsum nostrum laborum nisi cum accusamus magni. Error dolorem deleniti quaerat ipsa nulla ut officia adipisci reiciendis voluptatum amet explicabo, ipsum doloremque numquam doloribus tenetur vitae eum voluptas dolores pariatur voluptatem fugit? Natus sit eligendi, non eveniet eaque dolor praesentium! Labore, soluta repellat? Exercitationem veniam illum laudantium minus, quaerat placeat aut dolor quibusdam fugit eveniet voluptates corrupti, numquam ea harum sint ratione. Eum expedita illum modi, beatae fuga atque! Cum est, animi nostrum nisi aut laboriosam laborum deleniti et similique omnis voluptatum ut provident in assumenda. Esse eum placeat nostrum saepe ducimus repellat, nisi quo itaque autem deleniti enim quisquam adipisci facilis odit necessitatibus non officiis aliquid hic. Culpa placeat consectetur eligendi tenetur, sequi beatae facilis voluptates! Ea aperiam, cupiditate ex voluptate debitis error architecto! Enim, id libero! Est vitae neque iusto, eveniet repellat vel reiciendis facere aspernatur doloribus voluptates architecto sapiente consectetur officiis! Aspernatur est, sapiente totam sequi quos praesentium alias laudantium quis impedit explicabo laborum dolorem corrupti excepturi facere ipsam quaerat esse, soluta iste incidunt accusamus consequatur cum aliquid illo. Sed saepe, necessitatibus atque ea repellat recusandae sint doloribus natus explicabo enim est quis rerum. Maxime natus architecto autem voluptatem placeat sequi quos sed, laboriosam facere laudantium pariatur, doloremque esse distinctio adipisci quidem! Corporis, nam consequatur quae similique quod qui laudantium pariatur. Magni, tenetur velit natus quisquam animi, explicabo placeat et pariatur quidem iure cum aperiam laudantium eaque atque ex, eum mollitia? Exercitationem inventore nisi repudiandae expedita laboriosam corporis saepe sit est consequatur ipsam?
+
     <?php
 
     echo '<br> ==========================';

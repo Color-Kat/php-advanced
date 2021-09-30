@@ -20,5 +20,6 @@ require('./mail.php');
 // require('./AbstractAnimalClass.php');
 
 // ----- psr ----- //
-require('./psr-0/index.php');
+// require('./psr-0/index.php');
+require('./psr-3/index.php');
 
