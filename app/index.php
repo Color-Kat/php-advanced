@@ -15,7 +15,7 @@
 // require('./select.php');
 // require('./radio.php');
 // require('./fileUploading.php');
-require('./mail.php');
+// require('./mail.php');
 // require('./PointClass.php');
 // require('./AbstractAnimalClass.php');
 
@@ -23,3 +23,5 @@ require('./mail.php');
 // require('./psr-0/index.php');
 require('./psr-3/index.php');
 
+// ----- patterns ----- //
+require('./patterns/propertyContainer/index.php');
