@@ -24,4 +24,5 @@
 require('./psr-3/index.php');
 
 // ----- patterns ----- //
-require('./patterns/propertyContainer/index.php');
+// require('./patterns/propertyContainer/index.php');
+require('./patterns/delegation/index.php');
