@@ -15,6 +15,6 @@ class CLogger extends \ColorKat\Logger\AbstractLogger
      */
     public function log($level, string $message, array $context = []): void
     {
-        echo "$level - $message";
+        echo "[" . strtoupper($level) . "] - $message <br>";
     }
 }

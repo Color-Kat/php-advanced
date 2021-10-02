@@ -21,8 +21,11 @@
 
 // ----- psr ----- //
 // require('./psr-0/index.php');
-require('./psr-3/index.php');
+// require('./psr-3/index.php');
+
+// ----- SOLID ----- //
+require('./solid/s/index.php');
 
 // ----- patterns ----- //
 // require('./patterns/propertyContainer/index.php');
-require('./patterns/delegation/index.php');
+// require('./patterns/delegation/index.php');
