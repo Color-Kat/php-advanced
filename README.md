@@ -6,4 +6,10 @@ Learning php and docker at an advanced level
 - SOLID
 - patterns
 - practical examples
+- docekr and docker-compose
+- composer
+- mysql postgeSql and other
+- memcached
+- redis
+- noSql
 - and more
