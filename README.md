@@ -6,3 +6,4 @@ Learning php and docker at an advanced level
 - SOLID
 - patterns
 - practical examples
+- and more
