@@ -24,7 +24,8 @@
 // require('./psr-3/index.php');
 
 // ----- SOLID ----- //
-require('./solid/s/index.php');
+// require('./solid/s/index.php');
+require('./solid/o/index.php');
 
 // ----- patterns ----- //
 // require('./patterns/propertyContainer/index.php');

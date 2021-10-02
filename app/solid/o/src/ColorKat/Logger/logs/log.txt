@@ -1,0 +1,11 @@
+[ERROR] - Product already exists 
+[DEBUG] - Trying to creat new poduct - Iphone 13 
+[DEBUG] - Trying to creat new poduct - Iphone 13 
+[ERROR] - Product already exists 
+[DEBUG] - Trying to creat new poduct - Iphone 13 
+[DEBUG] - Trying to creat new poduct - Iphone 13 
+[ERROR] - Product already exists 
+[DEBUG] - Trying to creat new poduct - Iphone 13 
+[DEBUG] - Trying to creat new poduct - Iphone 13 
+[ERROR] - Product already exists 
+[NOTICE] - EVERYTHINGS WORKS VERY NICE! 
