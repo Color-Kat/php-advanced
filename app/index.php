@@ -25,7 +25,8 @@
 
 // ----- SOLID ----- //
 // require('./solid/s/index.php');
-require('./solid/o/index.php');
+// require('./solid/o/index.php');
+require('./solid/l/index.php');
 
 // ----- patterns ----- //
 // require('./patterns/propertyContainer/index.php');

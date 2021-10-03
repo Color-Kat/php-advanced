@@ -5,9 +5,13 @@ require('autoload.php');
 echo '<br><br> ====== solid/o/index.php ====== <br><br>';
 echo '- SOLID - open/closed principle - <br>';
 
-// ПРИНЦИ ЕДИНСТВЕННОЙ ОТВЕТСТВЕННОСТИ
-// выносим логгирование из класса product в отдельный класс CLoger
-// в данном случае он еще соответствует стандарту psr-3, который я писал ранее
+// ПРИНЦИП ОТКРЫТОСТИ\ЗАКРЫТОСТИ КЛАССА
+// Есть класс Product, в котором нужно осуществлять логирование, например.
+// Потом нам потребовалось поменять логику логирования - наприсер, логировать вместо файла в БД
+// если добавить эту логику прямо в этот класс, то это может сломать приложение,
+// поэтому сделаем общий для всех интерфейс логгирования, унаследуемся от него
+// и сделаем 2 класса - FileLogger и DBLogger
+
 $echoLogger = new \ColorKat\Logger\EchoLogger();
 $product = new \ColorKat\Product($echoLogger);
 $product->addProduct('Iphone 13', 'Very expencive, but very expensive but cheaper Iphone 12');
