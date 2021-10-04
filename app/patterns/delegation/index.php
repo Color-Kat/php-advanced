@@ -5,7 +5,6 @@ require('AbstractMessenger.php');
 require('EmailMessenger.php');
 require('SmsMessenger.php');
 require('AppMessenger.php');
-// require('PushMessenger.php');
 
 echo '<br><br>=== patterns/delegetion/index.php ===<br><br>';
 echo '---------- patterns/delegation ---------- <br>';

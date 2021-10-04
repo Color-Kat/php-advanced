@@ -27,9 +27,10 @@
 // require('./solid/s/index.php');
 // require('./solid/o/index.php');
 // require('./solid/l/index.php');
-require('./solid/i/index.php');
-require('./solid/d/index.php');
+// require('./solid/i/index.php');
+// require('./solid/d/index.php');
 
 // ----- patterns ----- //
 // require('./patterns/propertyContainer/index.php');
 // require('./patterns/delegation/index.php');
+require('./patterns/event-channel/index.php');
