@@ -8,7 +8,7 @@ class EventChannel implements EventChannelInterface
     {
     }
 
-    public function subscribe($topic, $subscriber)
+    public function subscribe($topic, SubscriberInterface $subscriber)
     {
         $this->topics[$topic][] = $subscriber;
 

@@ -33,4 +33,5 @@
 // ----- patterns ----- //
 // require('./patterns/propertyContainer/index.php');
 // require('./patterns/delegation/index.php');
-require('./patterns/event-channel/index.php');
+// require('./patterns/event-channel/index.php');
+require('./patterns/interface-pattern/index.php');

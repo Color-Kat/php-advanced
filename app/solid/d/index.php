@@ -15,6 +15,7 @@ require('RusTelecom.php');
 require('ColorZone.php');
 require('Komputer.php');
 
+// передаём InternetProviderInterface
 $computerSlowInternet = new Komputer(new RusTelecom());
 $computerColorZone = new Komputer(new ColorZone());
 
