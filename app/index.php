@@ -35,4 +35,5 @@
 // require('./patterns/delegation/index.php');
 // require('./patterns/event-channel/index.php');
 // require('./patterns/interface-pattern/index.php');
-require('./patterns/abstractFactory/index.php');
+// require('./patterns/abstractFactory/index.php');
+require('./patterns/factoryMethod/index.php');

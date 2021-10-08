@@ -20,7 +20,7 @@
     require('classes/GuiKitFactory.php');
 
     echo '<br><br>=== patterns/abstractFactory/index.php ===<br><br>';
-    echo '---------- patterns/deleabstract factorygation ---------- <br>';
+    echo '--------- patterns/abstract factory --------- <br>';
 
     /**
      * АБСТРАКТНАЯ ФАБРИКА
