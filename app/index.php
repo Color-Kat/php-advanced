@@ -36,4 +36,5 @@
 // require('./patterns/event-channel/index.php');
 // require('./patterns/interface-pattern/index.php');
 // require('./patterns/abstractFactory/index.php');
-require('./patterns/factoryMethod/index.php');
+// require('./patterns/factoryMethod/index.php');
+require('./patterns/staticFactory/index.php');
