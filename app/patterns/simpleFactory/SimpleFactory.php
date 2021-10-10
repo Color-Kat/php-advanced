@@ -30,8 +30,8 @@ class SimpleFactory
 
         $messenger
             ->setRecipient('admin@cmail.com')
-            ->setSender($sender)
-            
+            ->setSender($sender);
+
 
         return $messenger;
     }
