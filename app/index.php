@@ -40,4 +40,5 @@
 // require('./patterns/staticFactory/index.php');
 // require('./patterns/singleton/index.php');
 // require('./patterns/strategy/index.php');
-require('./patterns/multiton/index.php');
+// require('./patterns/multiton/index.php');
+require('./patterns/MVC/index.php');
