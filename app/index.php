@@ -39,4 +39,5 @@
 // require('./patterns/factoryMethod/index.php');
 // require('./patterns/staticFactory/index.php');
 // require('./patterns/singleton/index.php');
-require('./patterns/strategy/index.php');
+// require('./patterns/strategy/index.php');
+require('./patterns/multiton/index.php');
