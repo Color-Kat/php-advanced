@@ -4,7 +4,14 @@ namespace app\core;
 
 class Router
 {
+    /**
+     * @var array $routes list of routes and params (controller, action)
+     */
     protected $routes = [];
+
+    /**
+     * @var array $params current controller and action names
+     */
     protected $params = [];
 
     public function __construct()
@@ -16,14 +23,25 @@ class Router
         }
     }
 
-    public function add($route, $params)
+    /**
+     * format and add routes and params to propery $routes
+     * 
+     * @param string $route url
+     * @param array $params assocc arr with controller and action names
+     */
+    public function add($route, $params): void
     {
-        $route = str_replace('/', '\/', $route);
-        $route = preg_replace("/\/$/", "", $route);
+        $route = str_replace('/', '\/', $route); // add \ for /
+        $route = strlen($route) > 2 ? preg_replace("/\/$/", "", $route) : $route; // remove last slash
         $this->routes[$route] = $params;
     }
 
-    public function match()
+    /**
+     * check if the current url matches any route
+     * 
+     * @return bool
+     */
+    public function match(): bool
     {
         $url = $_SERVER['REQUEST_URI'];
 
@@ -33,7 +51,9 @@ class Router
                 $url,
                 $matches
             )) {
+                // save data about this route in $params
                 $this->params = $params;
+
                 return true;
             }
         }
@@ -41,15 +61,34 @@ class Router
         return false;
     }
 
+    /**
+     * 
+     */
     public function run()
     {
+        // check if the url matches any route
         if ($this->match()) {
-            // dump($this->params);
+            // controller path
+            $path = '\app\controllers\\' . ucfirst($this->params['controller']) . 'Controller';
 
-            $controllerPath = '\app\controllers\\' . ucfirst($this->params['controller']) . 'Controller.php';
-            if (!class_exists($controllerPath))
-                throw new \Exception("Controller not found - [$controllerPath]");
-            $controller = new $controllerPath;
+            // class doesn't exist
+            if (!class_exists($path)) {
+                throw new \Exception("Controller not found - [$path]");
+                exit;
+            }
+
+            // action name
+            $action = $this->params['action'] . 'Action';
+
+            // method doesn't exist
+            if (!method_exists($path, $action)) {
+                throw new \Exception("Method [$action] is not found in [$path]");
+                exit;
+            }
+
+            // create controller and run action
+            $controller = new $path;
+            $controller->$action();
         } else {
             echo 'Route is not found!';
         }

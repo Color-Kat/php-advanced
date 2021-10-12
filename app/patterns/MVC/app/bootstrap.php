@@ -1,9 +1,5 @@
 <?php
 
-
-
-// \app\core\Router::run();
-
 define('APP', __DIR__);
 define('ROOT', __DIR__ . '/..');
 
