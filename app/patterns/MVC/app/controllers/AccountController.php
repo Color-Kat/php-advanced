@@ -9,6 +9,7 @@ class AccountController extends Controller
 
     public function loginAction()
     {
+        // $this->view->redirect('/account/registrati on');
         $this->view->render('Login page');
     }
 

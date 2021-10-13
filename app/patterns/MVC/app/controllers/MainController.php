@@ -8,6 +8,8 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        $this->view->render('Main page title');
+        $testVar = 'it is Module View Controller!';
+
+        $this->view->render('Main page title', compact('testVar'));
     }
 }

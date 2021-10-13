@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use app\core\View;
+
 class Router
 {
     /**
@@ -73,7 +75,8 @@ class Router
 
             // class doesn't exist
             if (!class_exists($path)) {
-                throw new \Exception("Controller not found - [$path]");
+                if (IS_DEV) throw new \Exception("Controller not found - [$path]");
+                else View::errorCode(404);
                 exit;
             }
 
@@ -82,7 +85,8 @@ class Router
 
             // method doesn't exist
             if (!method_exists($path, $action)) {
-                throw new \Exception("Method [$action] is not found in [$path]");
+                if (IS_DEV) throw new \Exception("Method [$action] is not found in [$path]");
+                else View::errorCode(500);
                 exit;
             }
 

@@ -12,35 +12,42 @@ class View
     /**
      * @var array list of controller name and action
      */
-    private $params;
+    private $route;
 
     /**
      * default layout
      */
     private $layout = 'default';
 
-    public function __construct($params)
+    public function __construct($route)
     {
-        $this->params = $params;  // save controller and action names
+        $this->route = $route;  // save controller and action names
 
         // save path to view from views directory
-        $this->path = $params['controller'] . DIRECTORY_SEPARATOR . $params['action'];
+        $this->path = $route['controller'] . DIRECTORY_SEPARATOR . $route['action'];
     }
 
     /**
+     * show View to user by current route
+     * 
      * @param string $title page title
-     * @param mixed $vars
+     * @param array $vars
      */
-    public function render($title, $vars = null)
+    public function render(string $title, array $vars = [])
     {
         // path to require view
         $filename = APP . '/views/' . $this->path . '.php';
 
         // check if the file exists
         if (!file_exists($filename)) {
-            throw new \Exception("View [$filename] is not found!");
+            if (IS_DEV) throw new \Exception("View [$filename] is not found!");
+            else self::errorCode(404);
+
             return false;
         }
+
+        // extract array to variables 
+        extract($vars);
 
         // copy file content in $content ($content is displayed in the view)
         ob_start();
@@ -49,5 +56,35 @@ class View
 
         // require layout
         require APP . '/views/layouts/' . $this->layout . '.php';
+
+        return true;
+    }
+
+    /**
+     * show error page by http err code
+     * 
+     * @param int $code http error code
+     */
+    static public function errorCode($code)
+    {
+        http_response_code($code);
+
+        $filename = APP . '/views/errors/' . $code . '.php';
+
+        if (file_exists($filename)) require $filename;
+        else if (IS_DEV) throw new \Exception('file [$filename] is not found!');
+
+        exit;
+    }
+
+    /**
+     * redirect to another page
+     * 
+     * @param string $url redirect url
+     */
+    public function redirect(string $url)
+    {
+        header("location: $url");
+        exit;
     }
 }
