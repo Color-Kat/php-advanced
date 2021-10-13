@@ -2,10 +2,12 @@
 
 namespace app\controllers;
 
-class MainController
+use \app\core\Controller;
+
+class MainController extends Controller
 {
     public function indexAction()
     {
-        echo '<h1>Welcome!</h1>';
+        $this->view->render('Main page title');
     }
 }

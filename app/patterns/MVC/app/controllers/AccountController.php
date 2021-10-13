@@ -2,11 +2,18 @@
 
 namespace app\controllers;
 
-class AccountController
+use \app\core\Controller;
+
+class AccountController extends Controller
 {
 
     public function loginAction()
     {
-        echo 'loginAction';
+        $this->view->render('Login page');
+    }
+
+    public function registrationAction()
+    {
+        $this->view->render('registration page');
     }
 }

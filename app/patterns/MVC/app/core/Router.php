@@ -87,7 +87,7 @@ class Router
             }
 
             // create controller and run action
-            $controller = new $path;
+            $controller = new $path($this->params);
             $controller->$action();
         } else {
             echo 'Route is not found!';

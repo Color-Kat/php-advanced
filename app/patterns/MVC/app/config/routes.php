@@ -11,13 +11,18 @@ return [
         'action'     => 'login'
     ],
 
+    '/account/registration' => [
+        'controller' => 'account',
+        'action'     => 'registration'
+    ],
+
     '/posts' => [
-        'controller' => 'posts',
-        'action'     => 'getPosts'
+        'controller' => 'post',
+        'action'     => 'posts'
     ],
 
     '/posts/:postId' => [
-        'controller' => 'posts',
-        'action'     => 'getPostById'
+        'controller' => 'post',
+        'action'     => 'post'
     ]
 ];
