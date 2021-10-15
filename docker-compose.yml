@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-
   #web services (php and extentions)
   web:
     # path to Dockerfile for web
@@ -30,13 +29,21 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
 
   # adminer for control database
-  # adminer:
-  #   image: adminer
-  #   # restart container if an error occurs
+  adminer:
+    image: adminer
+    # restart container if an error occurs
+    restart: always
+    # adminer work on :6080 port
+    ports:
+      - 6080:8080
+
+  # phpmyadmin:
+  #   build: ./phpmyadmin
   #   restart: always
-  #   # adminer work on :6080 port
   #   ports:
   #     - 6080:8080
+  #   # environment:
+  #   #   - PMA_ARBITRARY=1
 
   # install composer
   composer:
@@ -48,11 +55,3 @@ services:
     working_dir: ${APP_PATH_CONTAINER}
     # install composer dependencies
     command: composer install
-
-  phpmyadmin:
-    build: ./phpmyadmin
-    restart: always
-    ports:
-      - 6080:8080
-    # environment:
-    #   - PMA_ARBITRARY=1
