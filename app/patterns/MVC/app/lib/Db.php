@@ -43,8 +43,8 @@ class Db
             }
         }
 
-        $res = $stmt->execute();
+        $stmt->execute();
 
-        return $res;
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 }
