@@ -17,8 +17,34 @@ class Db
             ((!empty($config['port'])) ? (';port=' . $config['port']) : '') .
             ';dbname=' . $config['dbname'];
 
-        echo $dns;
+        try {
+            $this->db = new \PDO($dns, $config['user'], $config['password']);
+        } catch (\PDOException $e) {
+            die('Cannot connect to db: ' . $e->getMessage());
+        }
+    }
 
-        $this->db = new \PDO($dns, $config['user'], $config['password']);
+    /**
+     * execute sql string
+     * 
+     * @param $sql sql string to execute
+     */
+    public function query($sql, $params = null)
+    {
+        // TODO use builder pattern like in laravel
+
+        if (!$this->db) throw new \Exception('Db connection is failed!');
+
+        $stmt = $this->db->prepare($sql);
+
+        if (!empty($params)) {
+            foreach ($params as $key => $val) {
+                $stmt->bindValue(':' . $key, $val);
+            }
+        }
+
+        $res = $stmt->execute();
+
+        return $res;
     }
 }
