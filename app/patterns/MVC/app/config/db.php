@@ -2,9 +2,9 @@
 
 return [
     'driver' => 'mysql',
-    'host' => '127.0.0.1',
+    'host' => 'db', // for docker-compose set name of container
     'port' => 3306,
     'dbname' => 'php_advanced',
-    'user' => 'test_user',
+    'user' => 'root',
     'password' => '123456',
 ];

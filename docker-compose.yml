@@ -16,6 +16,9 @@ services:
     # app files in container is here
     working_dir: ${APP_PATH_CONTAINER}
 
+    # links:
+    #   - db:mariadb
+
   # databases
   db:
     image: mariadb
