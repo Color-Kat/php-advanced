@@ -8,7 +8,9 @@ class PostController extends Controller
 {
     public function postsAction()
     {
-        $this->view->render('Posts list');
+        $products = $this->model->getProducts();
+
+        $this->view->render('Posts list', ['products' =>  $products]);
     }
 
     public function postAction($id)

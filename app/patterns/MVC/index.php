@@ -2,7 +2,7 @@
 
 session_start();
 
-define('IS_DEV', false);
+define('IS_DEV', true);
 
 require 'app/lib/dev.php';
 require 'autoload.php';
