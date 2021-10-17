@@ -1,2 +1,5 @@
 <h2>Login</h2>
-<input type="text" placeholder="login">
+<form action="/account/login" method="POST">
+    <input type="text" placeholder="login">
+    <input type="submit" value="login">
+</form>

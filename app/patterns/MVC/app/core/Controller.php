@@ -31,23 +31,29 @@ abstract class Controller
 
         // load model
         $modelMame = $this->loadModel($route['controller']);
-        $this->model = new $modelMame();
+        if ($modelMame) $this->model = new $modelMame();
     }
 
     /**
      * @param string $name name of model class
+     * @return string|bool class namespace or false
      */
     public function loadModel($name)
     {
+        // path to file
+        $path = APP . '/models/' .  ucfirst($name) . '.php';
+
         // namespace of model class
-        $path = 'app\models\\' .  ucfirst($name);
+        $namespace = 'app\models\\' .  ucfirst($name);
 
         // error if class not found
-        if (!class_exists($path)) {
-            if (IS_DEV) throw new \Exception("class [" . ucfirst($name) . "] not found [$path]");
-            else $this->view::errorCode(500);
-        }
+        // if (!class_exists($path)) {
+        // if (IS_DEV) throw new \Exception("class [" . ucfirst($name) . "] not found [$path]");
+        // else $this->view::errorCode(500);
+        // }
 
-        return $path;
+        if (file_exists($path) && class_exists($namespace))
+            return $namespace;
+        else return false;
     }
 }
