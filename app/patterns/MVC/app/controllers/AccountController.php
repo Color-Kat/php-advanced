@@ -11,13 +11,16 @@ class AccountController extends Controller
         // $this->view->redirect('/account/registrati on');
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            echo json_encode(['status' => 'success', 'body' => 123]);
+            $this->view::message('success', 'you are logged in');
         } else
             $this->view->render('Login page');
     }
 
     public function registrationAction()
     {
-        $this->view->render('registration page');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $this->view::location('/account/login');
+        } else
+            $this->view->render('registration page');
     }
 }

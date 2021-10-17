@@ -16,5 +16,11 @@ async function sendData(e) {
 
     let result = await response.json();
 
-    console.log(result);
+    if (result.url) {
+        document.location.href = result.url;
+        return;
+    }
+    
+
+    alert(`${result.status} - ${result.body}`);
 }

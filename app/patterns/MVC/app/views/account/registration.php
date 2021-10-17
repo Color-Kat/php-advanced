@@ -1,2 +1,6 @@
 <h2>Registration</h2>
-<input type="text" placeholder="registration">
+
+<form action="/account/registration" method="POST">
+    <input type="text" placeholder="registration">
+    <input type="submit" value="login">
+</form>

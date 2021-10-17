@@ -78,13 +78,35 @@ class View
     }
 
     /**
+     * sends http response
+     * 
+     * @param string $status message status
+     * @param string $message message
+     */
+    static public function message($status, $message)
+    {
+        echo json_encode(['status' => $status, 'body' => $message]);
+    }
+
+    /**
      * redirect to another page
      * 
      * @param string $url redirect url
      */
-    public function redirect(string $url)
+    static public function redirect(string $url)
     {
         header("location: $url");
+        exit;
+    }
+
+    /**
+     * redirect to another page by js
+     * 
+     * @param string $url redirect url
+     */
+    static public function location(string $url)
+    {
+        echo json_encode(['url' => $url]);
         exit;
     }
 }
