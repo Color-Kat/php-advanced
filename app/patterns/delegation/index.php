@@ -9,6 +9,12 @@ require('AppMessenger.php');
 echo '<br><br>=== patterns/delegetion/index.php ===<br><br>';
 echo '---------- patterns/delegation ---------- <br>';
 
+/**
+ * ДЕЛЕГАЦИЯ - фундументальный шаблон проектирования,
+ * это класс, у который, вместо выполнения логики в себе,
+ * переносит её в классы, которые потом использует
+ */
+
 $messenger = new AppMessenger();
 $messenger->setSender('Ich');
 $messenger->setRecipient('Du');

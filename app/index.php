@@ -41,4 +41,5 @@
 // require('./patterns/singleton/index.php');
 // require('./patterns/strategy/index.php');
 // require('./patterns/multiton/index.php');
-require('./patterns/MVC/index.php');
+// require('./patterns/MVC/index.php');
+require('./patterns/builder/index.php');

@@ -20,7 +20,6 @@ async function sendData(e) {
         document.location.href = result.url;
         return;
     }
-    
 
     alert(`${result.status} - ${result.body}`);
 }
