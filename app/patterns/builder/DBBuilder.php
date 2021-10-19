@@ -70,7 +70,6 @@ class DBBuilder implements DBInterface
     {
         $res = $this->db->get();
 
-        var_dump($res);
         $this->create();
 
         return $res;

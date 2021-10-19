@@ -16,10 +16,12 @@ echo '------- patterns/builder ------- <br>';
  */
 
 $db = new DBBuilder();
-$db->table('users')
+$res = $db->table('users')
     ->select('name', 'avatar')
     ->where('email', 'colorkat@gmail.com')
     ->where('id', '123')
     ->get();
+
+echo $res;
 
 echo '<br> ==========================';
