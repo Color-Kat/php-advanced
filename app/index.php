@@ -43,4 +43,5 @@
 // require('./patterns/multiton/index.php');
 // require('./patterns/MVC/index.php');
 // require('./patterns/builder/index.php');
-require('./patterns/prototype/index.php');
+// require('./patterns/prototype/index.php');
+require('./patterns/adapter/index.php');
