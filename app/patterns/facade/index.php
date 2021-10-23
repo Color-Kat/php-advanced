@@ -1,7 +1,5 @@
 <?php
 
-require_once 'classes/AirLogistics.php';
-
 echo '<br><br>= patterns/facede/index.php =<br><br>';
 echo '------- patterns/faced ------- <br>';
 
