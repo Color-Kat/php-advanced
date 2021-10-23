@@ -46,4 +46,5 @@
 // require('./patterns/prototype/index.php');
 // require('./patterns/adapter/index.php');
 // require('./patterns/facade/index.php');
-require('./patterns/bridge/index.php');
+// require('./patterns/bridge/index.php');
+require('./patterns/composite/index.php');
